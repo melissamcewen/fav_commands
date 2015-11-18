@@ -6,3 +6,7 @@ My favorite commands
 ```
 source ~/.bash_profile
 ```
+### create a bash alias
+```
+alias project="cd /dir/project"
+```
