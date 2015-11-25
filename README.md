@@ -1,24 +1,2 @@
 # fav_commands
-My favorite commands
-## Bash 
-
-### reload bash profile after editing it
-```
-source ~/.bash_profile
-```
-### create a bash alias
-```
-alias project="cd /dir/project"
-```
-
-## Drush
-
-### download new instance of drupal named whatever
-```
-drush dl drupal --drupal-project-rename=whatever
-```
-
-### install new drupal site on Vagrant
-```
-drush site-install standard --db-url='mysql://root:vagrant@localhost:3306/DBNAME'
-```
+a simple bash script that takes a string and reminds me of the command associated with it, but doesn't run the command, in the hopes that someday after typing that command 10000000000 times I'll finally remember it off the top of my head.
