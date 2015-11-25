@@ -18,18 +18,6 @@ case "$1" in
   Message="drush site-install standard --db-url='mysql://root:vagrant@localhost:3306/DBNAME'"
   ;;
 
-#Server
-"create a symlink")
-  Message="ln -s dirtopointtoto symlinkname"
-  ;;
-
-"restart Apache")
-  Message="sudo apachectl restart"
-  ;;
-
-"set GID")
-  Message="chmod g+s"
-  ;;
 
 #File Management
 
@@ -53,6 +41,104 @@ case "$1" in
   Message="into directory: tar -C /myfolder -xvf yourfile.tar"
   ;;
 
+#GIT
+"git file history")
+  Message="git log -- <filename> "
+  ;;
+
+"git show remote origin")
+  Message="git remote show origin"
+  ;;
+
+#MYSQL
+
+"mysql create database")
+  Message="CREATE DATABASE menagerie;"
+  ;;
+
+"mysql create user")
+  Message="CREATE USER 'NAME'@'localhost' IDENTIFIED BY 'PASSWORD';"
+  ;;
+
+"mysqldump")
+  Message="mysqldump -u username -p DBNAME > filename.sql "
+  ;;
+
+"mysql grant all")
+  Message="GRANT ALL PRIVILEGES on database.* to 'username'@'localhost';"
+  ;;
+
+"mysql grant read only")
+  Message="GRANT SELECT, SHOW VIEW ON database.* TO 'username'@'localhost';"
+  ;;
+
+"mysql import")
+  Message="mysql -u admin -p DBNAME < DBFILETOIMPORT.sql"
+  ;;
+
+"mysql list databases")
+  Message="show databases;"
+  ;;
+
+"mysql list users")
+  Message="SELECT User FROM mysql.user;"
+  ;;
+
+"mysql list user permissions")
+  Message="SHOW GRANTS FOR 'user'@'localhost';"
+  ;;
+
+"mysql show running processes")
+  Message="mysqladmin proc -u username -p"
+  ;;
+
+
+#Ruby Tools
+"Ruby version")
+  Message="ruby -v"
+  ;;
+
+"RVM list")
+  Message="rvm list"
+  ;;
+
+"RVM switch Ruby")
+  Message="rvm use 1.1.1"
+  ;;
+
+#Server
+"add user to secondary group")
+  Message="usermod -a -G GROUPNAME USERNAME"
+  ;;
+
+"change primary group")
+  Message="usermod -g GROUPNAME USERNAME"
+  ;;
+
+"create a group")
+  Message="groupadd GROUPNAME"
+  ;;
+
+"create a symlink")
+  Message="ln -s directory_to_point_to symlinkname"
+  ;;
+
+"list groups")
+  Message="groups OR getent groups"
+  ;;
+
+
+"list group members")
+  Message="grep 'group-name-here' /etc/group"
+  ;;
+
+"restart Apache")
+  Message="sudo apachectl restart"
+  ;;
+
+"set GID")
+  Message="chmod g+s"
+  ;;
 
 
 *)
