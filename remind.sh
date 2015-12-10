@@ -132,7 +132,7 @@ case "$1" in
   Message="grep 'group-name-here' /etc/group"
   ;;
 
-"restart Apache")
+"restart apache")
   Message="sudo apachectl restart"
   ;;
 
