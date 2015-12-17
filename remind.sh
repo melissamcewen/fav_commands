@@ -50,6 +50,14 @@ case "$1" in
   Message="git remote show origin"
   ;;
 
+"git remove files but keep local copies")
+  Message="git rm --cached -r somedir"
+  ;;
+
+"global gitignore")
+  Message="git config --global core.excludesfile $HOME/.gitignore"
+  ;;
+
 #MYSQL
 
 "mysql create database")
@@ -123,13 +131,21 @@ case "$1" in
   Message="ln -s directory_to_point_to symlinkname"
   ;;
 
+"export path")
+  Message="export PATH=$PATH:/bin:/OTHERPATH"
+  ;;
+
+
 "list groups")
   Message="groups OR getent groups"
   ;;
 
-
 "list group members")
   Message="grep 'group-name-here' /etc/group"
+  ;;
+
+  "list users")
+  Message="column -nts: /etc/passwd | sort"
   ;;
 
 "restart apache")
