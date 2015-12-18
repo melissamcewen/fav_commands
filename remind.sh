@@ -22,11 +22,11 @@ case "$1" in
 #File Management
 
 "rsync remote folder")
-  Message="rsync -r username@server.com:remotedir/  localdir/ "
+  Message="rsync -ra username@server.com:remotedir/  localdir/ "
   ;;
 
 "rsync options")
-  Message="verbose: -v, compress: -z, recursive: -r, -P: show progress "
+  Message="verbose: -v, compress: -z, recursive: -r, -P: show progress, -a archive mode"
   ;;
 
 "scp")
@@ -142,6 +142,10 @@ case "$1" in
 
 "list group members")
   Message="grep 'group-name-here' /etc/group"
+  ;;
+
+"list packages")
+  Message="dpkg -l | less"
   ;;
 
   "list users")
