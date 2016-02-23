@@ -42,8 +42,16 @@ case "$1" in
   ;;
 
 #GIT
+"git checkout remote branch")
+  Message="git checkout --track -b origin/daves_branch"
+  ;;
+
 "git file history")
   Message="git log -- <filename> "
+  ;;
+
+"git list file status")
+  Message="git ls-files -v"
   ;;
 
 "git show remote origin")
@@ -119,6 +127,9 @@ case "$1" in
   Message="usermod -a -G GROUPNAME USERNAME"
   ;;
 
+"Apache config")
+  Message="/etc/httpd/conf/httpd.conf"
+
 "change primary group")
   Message="usermod -g GROUPNAME USERNAME"
   ;;
@@ -160,6 +171,9 @@ case "$1" in
   Message="chmod g+s"
   ;;
 
+"set group permissions")
+  Message="setfacl -d -m g::rwx /directory"
+  ;;
 
 *)
   Message="sorry I don't know that one"
