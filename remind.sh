@@ -50,6 +50,10 @@ case "$1" in
   Message="git log -- <filename> "
   ;;
 
+"git ignore file permissions")
+ Message="git config core.fileMode false"
+ ;;
+
 "git list file status")
   Message="git ls-files -v"
   ;;
