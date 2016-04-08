@@ -129,6 +129,7 @@ case "$1" in
 
 "Apache config")
   Message="/etc/httpd/conf/httpd.conf"
+  ;;
 
 "change primary group")
   Message="usermod -g GROUPNAME USERNAME"
