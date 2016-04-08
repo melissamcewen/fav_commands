@@ -12,7 +12,7 @@ remind.sh "thing I want to be reminded of"
 Or create an alias in your bash profile
 
 ```
-alias remind='bash /home/vagrant/fav_commands/remind.sh'
+alias remind="bash /home/vagrant/fav_commands/remind.sh"
 
 ```
 
