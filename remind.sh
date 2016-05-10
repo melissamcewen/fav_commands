@@ -17,6 +17,15 @@ case "$1" in
 "install Drupal")
   Message="drush site-install standard --db-url='mysql://root:vagrant@localhost:3306/DBNAME'"
   ;;
+  
+"drop Drupal database"
+  Message="drush sql-drop"
+  ;;
+
+"sync Drupal database"
+  Message="drush sql-sync @ALIASFROM @ALIASTO"
+  ;;
+
 
 
 #File Management
@@ -42,6 +51,10 @@ case "$1" in
   ;;
 
 #GIT
+"git assume unchanged")
+  Message="git update-index --assume-unchanged <file name>"
+  ;;
+
 "git checkout remote branch")
   Message="git checkout --track -b origin/daves_branch"
   ;;
@@ -150,7 +163,6 @@ case "$1" in
 "export path")
   Message="export PATH=$PATH:/bin:/OTHERPATH"
   ;;
-
 
 "list groups")
   Message="groups OR getent groups"
