@@ -49,6 +49,10 @@ case "$1" in
 "untar")
   Message="into directory: tar -C /myfolder -xvf yourfile.tar"
   ;;
+  
+"Wget Mac alternative")
+  Message="curl 'IN URL' -o 'OUT FILE'
+  ;;
 
 #GIT
 "git assume unchanged")
@@ -124,7 +128,6 @@ case "$1" in
 "mysql show running processes")
   Message="mysqladmin proc -u username -p"
   ;;
-
 
 #Ruby Tools
 "Ruby version")
