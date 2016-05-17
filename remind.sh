@@ -56,7 +56,7 @@ case "$1" in
 
 #GIT
 "git assume unchanged")
-  Message="git update-index --assume-unchanged <file name>"
+  Message="git update-index --assume-unchanged <file name> or git update-index --skip-worktree <file name>"
   ;;
 
 "git checkout remote branch")
