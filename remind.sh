@@ -86,6 +86,10 @@ case "$1" in
 "global gitignore")
   Message="git config --global core.excludesfile $HOME/.gitignore"
   ;;
+  
+"git clean up files")
+  Message="git clean -f -d"
+;;
 
 #MYSQL
 
