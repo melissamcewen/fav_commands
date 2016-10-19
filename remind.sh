@@ -91,6 +91,11 @@ case "$1" in
   Message="git clean -f -d"
 ;;
 
+#Mongo
+"mongo start database from a path")
+  Message="mongod --dbpath /usr/local/var/mongodb"
+  ;;
+
 #MYSQL
 
 "mysql create database")
